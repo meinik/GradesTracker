@@ -1,0 +1,52 @@
+﻿<Window x:Name="AddStudent" x:Class="WpfApp1.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Add Student" Height="400" Width="600" ResizeMode="CanMinimize">
+    <Grid Background="#FF54494B" Width="594" Height="372">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" FontSize="14" FontWeight="Bold" Foreground="White">Student ID</Label>
+        <Label Grid.Row="2" Grid.Column="0" FontSize="14" FontWeight="Bold" Foreground="White">First Name</Label>
+        <Label Grid.Row="2" Grid.Column="1" FontSize="14" FontWeight="Bold" Foreground="White">Last Name</Label>
+        <Label Grid.Row="4" Grid.Column="0" FontSize="14" FontWeight="Bold" Foreground="White">Birthday MM/DD/YYYY</Label>
+        <TextBox x:Name="StudentIDTxtBx" Grid.Row="1" Grid.Column="0" Width="200" Height="30" HorizontalAlignment="Left" Margin="10,0,0,0" FontSize="16" AutomationProperties.IsRequiredForForm="True" VerticalAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" SelectionOpacity="1" SpellCheck.IsEnabled="True" TextChanged="StudentIDTxtBx_TextChanged" />
+        <TextBox x:Name="FirstNameTxtBx" Grid.Row="3" Grid.Column="0" Width="275" Height="30" HorizontalAlignment="Left" Margin="10,0,0,0" FontSize="16" VerticalAlignment="Center" VerticalContentAlignment="Center" Text=""></TextBox>
+        <TextBox x:Name="LastNameTxtBx" Grid.Row="3" Grid.Column="1" Width="275" Height="30" HorizontalAlignment="Left" Margin="10,0,0,0" FontSize="14" VerticalAlignment="Center" VerticalContentAlignment="Center" Text="" ></TextBox>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.Column="0"/>
+        <Button x:Name="AddButton" Grid.Row="5" Grid.Column="1" Height="40" Width="90" Click="AddButton_Click" FontSize="16" Background="#FF9DA39A" Margin="153.2,25.8,53.6,28.6" Content="Add"/>
+        <Button x:Name="CancelButton" Grid.Row="5" Grid.Column="1" Height="40" Width="90" Click="CancelButton_Click" FontSize="16" Background="#FFB98389" Margin="44.2,25.8,162.6,28.6" ScrollViewer.CanContentScroll="True">Cancel</Button>
+        <CheckBox x:Name="SpecialAccomodations" Content="Special accommodations" Grid.Column="1" HorizontalAlignment="Left" Margin="60.2,70.2,0,0" Grid.Row="1" VerticalAlignment="Top"
+                  Checked="SpecialAccomodations_Checked" Unchecked="SpecialAccomodations_Unchecked" IsChecked="False"/>
+
+        <DatePicker HorizontalAlignment="Left"
+                    Margin="10,35.2,0,0"
+                    VerticalAlignment="top"
+                    SelectedDateChanged="DatePicker_SelectedDateChanged" Grid.Row="5" FontSize="14"/>
+
+        <GroupBox Grid.Column="1" Header="Gender" HorizontalAlignment="Left" Height="62" Margin="0.2,14,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="292">
+            <StackPanel Orientation="Horizontal" Margin="0,-12,0.2,0" 
+                        ToggleButton.Checked="StackPanel_Checked"
+                        ToggleButton.Unchecked="StackPanel_Unchecked">
+                <RadioButton x:Name="Female" GroupName="gender" Content="Female" HorizontalAlignment="Left" Margin="52.2,21.2,0,0" VerticalAlignment="Top"  IsChecked="true"/>
+                <RadioButton x:Name="Male" GroupName="gender" Content="Male" HorizontalAlignment="Left" Margin="52.2,21.2,0,0" VerticalAlignment="Top" />
+            </StackPanel>
+        </GroupBox>
+
+    </Grid>
+</Window>
