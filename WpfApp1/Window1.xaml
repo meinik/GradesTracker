@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Add Student" Height="400" Width="600" ResizeMode="CanMinimize">
-    <Grid Background="#FF54494B" Width="594" Height="372">
+        Title="Add Student" Height="400" Width="1000" ResizeMode="CanMinimize">
+    <Grid Background="#FF54494B" Width="994" Height="372">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
@@ -16,30 +16,31 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="148*"/>
+            <ColumnDefinition Width="158*"/>
+            <ColumnDefinition Width="191*"/>
         </Grid.ColumnDefinitions>
 
-        <Label Grid.Row="0" Grid.Column="0" FontSize="14" FontWeight="Bold" Foreground="White">Student ID</Label>
-        <Label Grid.Row="2" Grid.Column="0" FontSize="14" FontWeight="Bold" Foreground="White">First Name</Label>
-        <Label Grid.Row="2" Grid.Column="1" FontSize="14" FontWeight="Bold" Foreground="White">Last Name</Label>
-        <Label Grid.Row="4" Grid.Column="0" FontSize="14" FontWeight="Bold" Foreground="White">Birthday MM/DD/YYYY</Label>
-        <TextBox x:Name="StudentIDTxtBx" Grid.Row="1" Grid.Column="0" Width="200" Height="30" HorizontalAlignment="Left" Margin="10,0,0,0" FontSize="16" AutomationProperties.IsRequiredForForm="True" VerticalAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" SelectionOpacity="1" SpellCheck.IsEnabled="True" TextChanged="StudentIDTxtBx_TextChanged" />
-        <TextBox x:Name="FirstNameTxtBx" Grid.Row="3" Grid.Column="0" Width="275" Height="30" HorizontalAlignment="Left" Margin="10,0,0,0" FontSize="16" VerticalAlignment="Center" VerticalContentAlignment="Center" Text=""></TextBox>
-        <TextBox x:Name="LastNameTxtBx" Grid.Row="3" Grid.Column="1" Width="275" Height="30" HorizontalAlignment="Left" Margin="10,0,0,0" FontSize="14" VerticalAlignment="Center" VerticalContentAlignment="Center" Text="" ></TextBox>
+        <Label Grid.Row="0" Grid.Column="0" FontSize="14" FontWeight="Bold" Foreground="White" Margin="0,0,0,95" Grid.RowSpan="2">Student ID</Label>
+        <Label Grid.Row="2" Grid.Column="0" FontSize="14" FontWeight="Bold" Foreground="White" Margin="0,0,0,95" Grid.RowSpan="2">First Name</Label>
+        <Label Grid.Row="2" Grid.Column="1" FontSize="14" FontWeight="Bold" Foreground="White" Margin="14,0,344.6,95" Grid.RowSpan="2" Grid.ColumnSpan="2">Last Name</Label>
+        <Label Grid.Row="4" Grid.Column="0" FontSize="14" FontWeight="Bold" Foreground="White" Margin="0,0,0,95" Grid.RowSpan="2">Birthday MM/DD/YYYY</Label>
+        <TextBox x:Name="StudentIDTxtBx" Grid.Row="1" Grid.Column="0" Width="200" Height="30" HorizontalAlignment="Left" Margin="10,47,0,47" FontSize="16" AutomationProperties.IsRequiredForForm="True" VerticalAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" SelectionOpacity="1" SpellCheck.IsEnabled="True" TextChanged="StudentIDTxtBx_TextChanged" />
+        <TextBox x:Name="FirstNameTxtBx" Grid.Row="3" Grid.Column="0" Width="275" Height="30" HorizontalAlignment="Left" Margin="10,47,0,47" FontSize="16" VerticalAlignment="Center" VerticalContentAlignment="Center" Text=""></TextBox>
+        <TextBox x:Name="LastNameTxtBx" Grid.Row="3" Grid.Column="1" Width="275" Height="30" HorizontalAlignment="Left" Margin="10,47,0,47" FontSize="14" VerticalAlignment="Center" VerticalContentAlignment="Center" Text="" ></TextBox>
 
         <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.Column="0"/>
-        <Button x:Name="AddButton" Grid.Row="5" Grid.Column="1" Height="40" Width="90" Click="AddButton_Click" FontSize="16" Background="#FF9DA39A" Margin="153.2,25.8,53.6,28.6" Content="Add"/>
-        <Button x:Name="CancelButton" Grid.Row="5" Grid.Column="1" Height="40" Width="90" Click="CancelButton_Click" FontSize="16" Background="#FFB98389" Margin="44.2,25.8,162.6,28.6" ScrollViewer.CanContentScroll="True">Cancel</Button>
-        <CheckBox x:Name="SpecialAccomodations" Content="Special accommodations" Grid.Column="1" HorizontalAlignment="Left" Margin="60.2,70.2,0,0" Grid.Row="1" VerticalAlignment="Top"
-                  Checked="SpecialAccomodations_Checked" Unchecked="SpecialAccomodations_Unchecked" IsChecked="False"/>
+        <Button x:Name="AddButton" Grid.Row="5" Grid.Column="1" Click="AddButton_Click" FontSize="16" Background="#FF9DA39A" Margin="122,26,124,53" Content="Save"/>
+        <Button x:Name="CancelButton" Grid.Row="5" Grid.Column="1" Click="CancelButton_Click" FontSize="16" Background="#FFB98389" Margin="14,26,232,53" ScrollViewer.CanContentScroll="True">Cancel</Button>
+        <CheckBox x:Name="SpecialAccomodations" Content="Special accommodations" Grid.Column="1" HorizontalAlignment="Left" Margin="68,99,0,0" Grid.Row="1" VerticalAlignment="Top"
+                  Checked="SpecialAccomodations_Checked" Unchecked="SpecialAccomodations_Unchecked" IsChecked="False" Height="15" Width="151"/>
 
         <DatePicker HorizontalAlignment="Left"
-                    Margin="10,35.2,0,0"
+                    Margin="10,35,0,0"
                     VerticalAlignment="top"
-                    SelectedDateChanged="DatePicker_SelectedDateChanged" Grid.Row="5" FontSize="14"/>
+                    SelectedDateChanged="DatePicker_SelectedDateChanged" Grid.Row="5" FontSize="14" Height="27" Width="114"/>
 
-        <GroupBox Grid.Column="1" Header="Gender" HorizontalAlignment="Left" Height="62" Margin="0.2,14,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="292">
+        <GroupBox Grid.Column="1" Header="Gender" HorizontalAlignment="Left" Height="62" Margin="1,14,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="292">
             <StackPanel Orientation="Horizontal" Margin="0,-12,0.2,0" 
                         ToggleButton.Checked="StackPanel_Checked"
                         ToggleButton.Unchecked="StackPanel_Unchecked">
@@ -47,6 +48,15 @@
                 <RadioButton x:Name="Male" GroupName="gender" Content="Male" HorizontalAlignment="Left" Margin="52.2,21.2,0,0" VerticalAlignment="Top" />
             </StackPanel>
         </GroupBox>
-
+        <DataGrid x:Name="DataGrid1" 
+                  ScrollViewer.CanContentScroll="True"
+                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                  Grid.Column="2" 
+                  AutoGenerateColumns="True"
+                  ItemsSource="{Binding }"
+                  HorizontalAlignment="Left" Height="329" Margin="23,14,0,0" Grid.Row="1" Grid.RowSpan="5" VerticalAlignment="Top" Width="335"/>
+        <Button x:Name="load" Background="#FF9DA39A" FontSize="16" Content="Load" HorizontalAlignment="Left" Margin="218,26,0,0" Grid.Row="5" VerticalAlignment="Top" Width="75" Click="load_Click" Grid.Column="1" Height="45"/>
     </Grid>
 </Window>
+

@@ -5,27 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid Background="#FF54494B" Width="800" Margin="0,0,-6.4,-2">
+        Title="MainWindow" Height="450" Width="400">
+    <Grid Background="#FF54494B" Margin="0,0,3.6,-2">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition/>
+            <RowDefinition Height="Auto" MinHeight="116"/>
+            <RowDefinition Height="Auto" MinHeight="89.6"/>
             <RowDefinition Height="Auto"/>
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        <Label Grid.Row="1" Grid.Column="0"  Width="116" FontSize="14" FontWeight="Bold" Foreground="White" Margin="95,94,179.4,80.8">Student ID</Label>
+        <Label Grid.Row="1" Grid.Column="0" FontSize="14" Width="116" FontWeight="Bold" Foreground="White" Margin="94,181,180.4,96.8" Grid.RowSpan="2">Assignment</Label>
+        <Label Grid.Row="2" Grid.Column="0" FontSize="14" Width="116" FontWeight="Bold" Foreground="White" Margin="95,49.2,179.4,35.8">Score</Label>
 
-        <Label Grid.Row="0" Grid.Column="0" FontSize="14" FontWeight="Bold" Foreground="White" Margin="0,0,659,90.6">Student</Label>
-        <Grid HorizontalAlignment="Left" Height="100" Margin="230,157,0,-87.4" VerticalAlignment="Top" Width="100"/>
-        <DataGrid HorizontalAlignment="Left" 
-                  Height="292" Margin="10,33,0,-155.4" 
-                  VerticalAlignment="Top" Width="780"
-                  AutoGenerateColumns="True"
-                  ItemsSource="{Binding Student}"
-                  />
-        <Button x:Name="NewStudent" Content="Add student" Height="40" Width="90" FontSize="16" Background="#FF9DA39A" Margin="10,364,700,-148" Click="NewStudent_Click"></Button>
-        <Button Content="Print" HorizontalAlignment="Left" Height="40" Width="90" FontSize="16" Background="#FF9DA39A" Margin="322,365,0,-147.4" VerticalAlignment="Top" />
-        <Button Name="CloseButton" Height="40" Width="90" Click="CloseButton_Click" FontSize="16" Background="#FFB98389" Margin="700,365,10,-146.6" ScrollViewer.CanContentScroll="True">Close</Button>
-        <Button Content="Button" HorizontalAlignment="Left" Height="40" Width="90" FontSize="16" Background="#FF9DA39A" Margin="163,365,0,-148.2" VerticalAlignment="Top"  RenderTransformOrigin="0.435,-0.63"/>
+        <TextBox x:Name="AssignmentTxtBx" Grid.Column="0" Width="200" Height="30" HorizontalAlignment="Left" Margin="95,1.2,0,84.8" FontSize="16" AutomationProperties.IsRequiredForForm="True" VerticalAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" SelectionOpacity="1" SpellCheck.IsEnabled="True" Grid.Row="2" />
+        <TextBox x:Name="ScoreTxtBx" Grid.Row="2" Grid.Column="0" Width="200" Height="30" HorizontalAlignment="Left" Margin="95,80.2,0,5.8" FontSize="16" VerticalAlignment="Center" VerticalContentAlignment="Center" Text=""/>
+
+        <Button x:Name="NewStudent" Content="Add student" FontSize="14" Width="116" Background="#FF9DA39A" Margin="241,26,33.4,160.8" Click="NewStudent_Click" Grid.Row="1" MaxHeight="30" MaxWidth="140"/>
+        <Button Name="CloseButton" Click="CloseButton_Click" FontSize="14" Background="#FFB98389" Margin="206,21.2,68.4,32.4" ScrollViewer.CanContentScroll="True" Grid.Row="3" MaxHeight="30" MaxWidth="140">Close</Button>
+        <Button x:Name="Save" Content="Save" HorizontalAlignment="Left" Height="35" Width="116" FontSize="14" Background="#FF9DA39A" Margin="73,22.2,0,0" VerticalAlignment="Top"  RenderTransformOrigin="0.435,-0.63" Grid.Row="3" Click="Save_Click" MaxHeight="30" MaxWidth="140"/>
+        <Button x:Name="ViewGrades" Content="View Grades" HorizontalAlignment="Left" Height="35" Width="116" FontSize="14" Background="#FF9DA39A" Margin="32,26,0,0" VerticalAlignment="Top"  RenderTransformOrigin="0.435,-0.63" Click="ViewGrades_Click" Grid.Row="1" MaxHeight="30" MaxWidth="140"/>
+
+        <ComboBox x:Name="Dropdown" HorizontalAlignment="Left" Margin="94,141,0,0" VerticalAlignment="Top" Width="200" Height="31" Grid.Row="1"/>
+
     </Grid>
 
 </Window>

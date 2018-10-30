@@ -12,6 +12,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Microsoft.Win32;
+using System.Data;
+using Microsoft.VisualBasic.FileIO;
 
 namespace WpfApp1
 {
@@ -20,31 +23,57 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+    String GradesFile { get; set; }
+    
 
-    public MainWindow()
+  
+        public MainWindow()
         {
-            InitializeComponent();
-    }
+         InitializeComponent();
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        List<Student>  st = StudentService.ReadFile(@"C:\Users\meinik\Documents\students.txt");
+      
+        DataContext = st;
+        Dropdown.ItemsSource = st;
+        Dropdown.DisplayMemberPath = "ID";
+        Dropdown.SelectedValuePath = "ID";
+                     
+        }
+
+    private void Button_Click(object sender, RoutedEventArgs e)
         {
-
         }
         private void NewStudent_Click(object sender, RoutedEventArgs e)
         {
         Window1 win1 = new Window1();
-        this.Visibility = Visibility.Hidden; 
         win1.Show();
-        this.Close();
-      
-      
+        this.Close();      
         }
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
         this.Close();
         }
-    //var desiredText = File.ReadLines("C:\myfile.txt").ElementAt(1);  para leer la 2da linea
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+        }
+
+
+    private void Save_Click(object sender, RoutedEventArgs e)
+    {
+      using (StreamWriter writer = new StreamWriter(@"C:\Users\meinik\Documents\scores.txt", true))
+      {
+        writer.WriteLine(Dropdown.Text + "," + AssignmentTxtBx.Text + "," + ScoreTxtBx.Text );
+        MessageBox.Show("Saved!");
+      }
+    }
+
+    private void ViewGrades_Click(object sender, RoutedEventArgs e)
+    {
+      ShowGrades gradeWin = new ShowGrades();
+      gradeWin.Show();
+    }
   }
 
 
