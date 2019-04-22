@@ -38,7 +38,6 @@
     <Reference Include="GenericParsing, Version=1.2.0.0, Culture=neutral, PublicKeyToken=e2512bd771ff0617, processorArchitecture=MSIL">
       <HintPath>..\packages\GenericParsing.1.2.0\lib\netstandard2.0\GenericParsing.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -74,7 +73,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Student.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>

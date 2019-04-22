@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace WpfApp1
+namespace GradesTrakkerApp
 {
   public class Grades
   {
     public String ID { get; set; }
     public String Assignment { get; set; }
-    public String Grade { get; set; } //??
+    public String Grade { get; set; }
 
   }
 
@@ -25,7 +25,7 @@ namespace WpfApp1
                  let split = l.Split(',')
                  select new Grades
                  {
-                   ID = split[0],
+                  ID = split[0],
                   Assignment = split[1],
                   Grade = split[2]
                  };

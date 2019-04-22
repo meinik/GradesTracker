@@ -14,13 +14,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Microsoft.Win32;
 using System.Data;
-using Microsoft.VisualBasic.FileIO;
 
-namespace WpfApp1
+namespace GradesTrakkerApp
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
     String GradesFile { get; set; }
