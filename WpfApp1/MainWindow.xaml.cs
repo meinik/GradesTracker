@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 using Microsoft.Win32;
 using System.Data;
 
-namespace GradesTrakkerApp
+namespace GradesTrackerApp
 {
 
     public partial class MainWindow : Window

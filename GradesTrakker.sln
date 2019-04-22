@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradesTrakker", "WpfApp1\GradesTrakker.csproj", "{F4A2122A-DBCE-4B39-B1E7-A7DDB3ADF45D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradesTracker", "WpfApp1\GradesTracker.csproj", "{F4A2122A-DBCE-4B39-B1E7-A7DDB3ADF45D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradesTrakkerTests", "NotesTrakkerTests\GradesTrakkerTests.csproj", "{666B4075-5CF1-4CD3-9627-94496BEF264E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradesTrackerTests", "NotesTrakkerTests\GradesTrackerTests.csproj", "{666B4075-5CF1-4CD3-9627-94496BEF264E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

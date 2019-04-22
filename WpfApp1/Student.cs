@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using GradesTrakkerApp;
+using GradesTrackerApp;
 
-namespace GradesTrakkerApp
+namespace GradesTrackerApp
 {
 
   public class Student

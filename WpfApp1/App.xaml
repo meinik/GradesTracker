@@ -1,7 +1,7 @@
-﻿<Application x:Class="GradesTrakkerApp.App"
+﻿<Application x:Class="GradesTrackerApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:GradesTrakkerApp"
+             xmlns:local="clr-namespace:GradesTrackerApp"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

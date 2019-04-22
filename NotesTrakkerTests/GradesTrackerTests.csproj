@@ -64,9 +64,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WpfApp1\GradesTrakker.csproj">
+    <ProjectReference Include="..\WpfApp1\GradesTracker.csproj">
       <Project>{F4A2122A-DBCE-4B39-B1E7-A7DDB3ADF45D}</Project>
-      <Name>GradesTrakker</Name>
+      <Name>GradesTracker</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

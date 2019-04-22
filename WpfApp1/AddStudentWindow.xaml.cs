@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
 
-namespace GradesTrakkerApp
+namespace GradesTrackerApp
 {
   /// <summary>
   /// Interaction logic for Window1.xaml

@@ -1,12 +1,12 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using GradesTrakkerApp;
+using GradesTrackerApp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GradesTrakkerApp.Tests
+namespace GradesTrackerApp.Tests
 {
   [TestClass()]
   public class ShowGradesTests

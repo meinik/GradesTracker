@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace GradesTrakkerApp
+namespace GradesTrackerApp
 {
   /// <summary>
   /// Interaction logic for ShowGrades.xaml
